@@ -1,7 +1,7 @@
 /*
  * Free Licensed, For HOME & Biz
  */
-package in.th.java;
+package th.in.java;
 
 /**
  *

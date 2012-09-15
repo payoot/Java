@@ -1,7 +1,7 @@
 /*
  * Free Licensed, For HOME & Biz
  */
-package in.th.java;
+package th.in.java;
 
 import static org.testng.Assert.*;
 import org.testng.annotations.Test;
@@ -37,7 +37,6 @@ public class ThaiCurrencyNGTest {
     public void testGetBahtmorethanMillion2() {
         final ThaiCurrency currency1 = new ThaiCurrency("35,000,001.50");
         final String result = currency1.toString();
-        System.out.println(result);
         assertEquals(result, "สามสิบห้าล้านหนึ่งบาทห้าสิบสตางค์", "More than million error : 35,000,001.50");
     }
 
