@@ -1,7 +1,7 @@
 /*
  * Free Licensed, For HOME & Biz
  */
-package th.in.java;
+package th.in.java.thai;
 
 import static org.testng.Assert.*;
 import org.testng.annotations.Test;

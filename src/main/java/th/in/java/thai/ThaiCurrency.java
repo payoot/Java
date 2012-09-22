@@ -1,7 +1,7 @@
 /*
- * Free Licensed, For HOME & Biz
+ * โค้ดเสรี, สำหรับไว้คอมไฟล์และรันเท่านั้น ห้ามนำไปรับประทาน
  */
-package th.in.java;
+package th.in.java.thai;
 
 /**
  *
