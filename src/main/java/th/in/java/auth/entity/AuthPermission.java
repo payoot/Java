@@ -26,7 +26,7 @@ import javax.xml.bind.annotation.XmlTransient;
  */
 @Entity
 @Table(name = "auth_permission", schema = "public", uniqueConstraints = {
-    @UniqueConstraint(columnNames = {"content_type_id", "codename"})})
+    @UniqueConstraint(columnNames = {"codename"})})
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "AuthPermission.findAll", query = "SELECT a FROM AuthPermission a"),
