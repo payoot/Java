@@ -11,7 +11,6 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import th.in.java.io.SafeClose;
 
 /**
  *
@@ -19,10 +18,10 @@ import th.in.java.io.SafeClose;
  */
 public class PreparedQuery {
 
+    private static final Logger LOG = Logger.getLogger(PreparedQuery.class.getName());
+
     private transient final Connection connection;
     private transient final PreparedStatement statement;
-
-    private static final Logger LOG = Logger.getLogger(SafeClose.class.getName());
 
     public PreparedQuery(final Connection connection, final String query)
         throws SQLException {
@@ -38,6 +37,7 @@ public class PreparedQuery {
             }
 
             for (int i=0; i<params.size(); i++) {
+                LOG.log(Level.INFO, "params[{0}] : {1}", new Object[]{i, params});
                 if (params.get(i) instanceof String) {
                     statement.setString(i+1, (String) params.get(i));
                 } else if (params.get(i) instanceof Long) {
@@ -47,8 +47,7 @@ public class PreparedQuery {
                 } else if (params.get(i) instanceof Date) {
                     statement.setDate(i+1, (Date) params.get(i));
                 } else {
-                    LOG.log(Level.SEVERE, "Does not support parameter: {0}", params.get(i).getClass().getName());
-                    throw new SQLException("Does not support parameter type.");
+                    throw new SQLException("Does not support parameter type: " + params.get(i).getClass().getName());
                 }
             }
         } while(false);

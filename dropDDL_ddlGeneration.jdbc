@@ -1,0 +1,18 @@
+ALTER TABLE public.auth_group DROP CONSTRAINT UNQ_auth_group_0
+ALTER TABLE public.auth_group_permissions DROP CONSTRAINT FK_auth_group_permissions_group_id
+ALTER TABLE public.auth_group_permissions DROP CONSTRAINT FK_auth_group_permissions_permission_id
+ALTER TABLE public.auth_group_permissions DROP CONSTRAINT UNQ_auth_group_permissions_0
+ALTER TABLE public.auth_permission DROP CONSTRAINT UNQ_auth_permission_0
+ALTER TABLE public.auth_user DROP CONSTRAINT UNQ_auth_user_0
+ALTER TABLE public.auth_user_groups DROP CONSTRAINT FK_auth_user_groups_group_id
+ALTER TABLE public.auth_user_groups DROP CONSTRAINT FK_auth_user_groups_user_id
+ALTER TABLE public.auth_user_groups DROP CONSTRAINT UNQ_auth_user_groups_0
+ALTER TABLE public.auth_user_user_permissions DROP CONSTRAINT FK_auth_user_user_permissions_permission_id
+ALTER TABLE public.auth_user_user_permissions DROP CONSTRAINT FK_auth_user_user_permissions_user_id
+ALTER TABLE public.auth_user_user_permissions DROP CONSTRAINT UNQ_auth_user_user_permissions_0
+DROP TABLE public.auth_group
+DROP TABLE public.auth_group_permissions
+DROP TABLE public.auth_permission
+DROP TABLE public.auth_user
+DROP TABLE public.auth_user_groups
+DROP TABLE public.auth_user_user_permissions

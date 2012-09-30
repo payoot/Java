@@ -1,5 +1,5 @@
 /*
- * Free Licensed, For HOME & Biz
+ * โค้ดเสรี, สำหรับไว้คอมไฟล์และรันเท่านั้น ห้ามนำไปรับประทาน
  */
 package th.in.java.thai;
 
@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 /**
  *
- * @author nuboat
+ * @author Peerapat Asoktummarungsri, @nuboat
  */
 public class ThaiCurrencyNGTest {
 

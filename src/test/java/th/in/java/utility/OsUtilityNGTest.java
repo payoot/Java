@@ -1,6 +1,5 @@
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * โค้ดเสรี, สำหรับไว้คอมไฟล์และรันเท่านั้น ห้ามนำไปรับประทาน
  */
 package th.in.java.utility;
 
@@ -9,7 +8,7 @@ import org.testng.annotations.Test;
 
 /**
  *
- * @author nuboat
+ * @author Peerapat Asoktummarungsri, @nuboat
  */
 public class OsUtilityNGTest {
 
@@ -29,9 +28,16 @@ public class OsUtilityNGTest {
 
     @Test
     public void testIsUnix() {
-        final boolean expResult = true;
+        final boolean expResult = false;
         final boolean result = OsUtility.isUnix();
         assertEquals(result, expResult, "IS UNIX");
+    }
+
+    @Test
+    public void testIsOSX() {
+        final boolean expResult = true;
+        final boolean result = OsUtility.isMaxOSX();
+        assertEquals(result, expResult, "IS MAC OS X");
     }
 
 }

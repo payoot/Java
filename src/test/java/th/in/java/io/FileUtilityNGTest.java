@@ -1,8 +1,7 @@
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * โค้ดเสรี, สำหรับไว้คอมไฟล์และรันเท่านั้น ห้ามนำไปรับประทาน
  */
-package th.in.java.utility;
+package th.in.java.io;
 
 import java.io.File;
 import static org.testng.Assert.*;
@@ -10,9 +9,9 @@ import org.testng.annotations.Test;
 
 /**
  *
- * @author nuboat
+ * @author Peerapat Asoktummarungsri, @nuboat
  */
-public class FileUtilityTest {
+public class FileUtilityNGTest {
 
     @Test
     public void testGetFile() {
