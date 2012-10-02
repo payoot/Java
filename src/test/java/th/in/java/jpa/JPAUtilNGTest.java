@@ -25,7 +25,6 @@ public class JPAUtilNGTest {
         final Query query = result.createNativeQuery("select now();");
         final Object obj = query.getSingleResult();
 
-        LOG.info(obj.toString());
         assertNotNull(obj, "Object should not be null.");
     }
 
