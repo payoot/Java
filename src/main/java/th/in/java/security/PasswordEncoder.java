@@ -30,26 +30,20 @@ public final class PasswordEncoder {
     public static String encode(final String password, final String saltKey)
 	    throws NoSuchAlgorithmException, IOException {
 
-        final Base64 base64 = new Base64();
         final MessageDigest digest = MessageDigest.getInstance(SHA256);
 
         digest.reset();
-        digest.update(base64.decode(saltKey.getBytes()));
+        digest.update(Base64.decodeBase64(saltKey.getBytes()));
 
-        byte[] btPass;
-        btPass = digest.digest(password.getBytes(CharEncoding.UTF_8));
-        digest.reset();
+        byte[] btPass = password.getBytes(CharEncoding.UTF_8);
         btPass = digest.digest(btPass);
-        digest.reset();
         btPass = digest.digest(btPass);
-        digest.reset();
         btPass = digest.digest(btPass);
-        digest.reset();
         btPass = digest.digest(btPass);
-        digest.reset();
+        btPass = digest.digest(btPass);
         btPass = digest.digest(btPass);
 
-        return new String(base64.encode(btPass));
+        return new String(Base64.encodeBase64(btPass));
     }
 
 }

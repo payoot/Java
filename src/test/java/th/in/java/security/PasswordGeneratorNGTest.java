@@ -17,6 +17,7 @@ public class PasswordGeneratorNGTest {
     public void testGeneratePassword() {
         final int passwordLength = 12;
         final String result = PasswordGenerator.generatePassword(passwordLength);
+        System.out.println("Random: " + result);
         assertEquals(result.length(), passwordLength);
     }
 }
