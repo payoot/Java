@@ -26,7 +26,6 @@ public final class PasswordEncoder {
      * @return
      * @throws NoSuchAlgorithmException
      * @throws IOException
-     * @author Ashish Shukla
      */
     public static String encode(final String password, final String saltKey)
 	    throws NoSuchAlgorithmException, IOException {
