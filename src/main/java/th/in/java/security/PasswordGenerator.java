@@ -5,7 +5,8 @@ package th.in.java.security;
 
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
-import org.apache.log4j.Logger;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -44,7 +45,7 @@ public final class PasswordGenerator {
 		try {
 			secureRandom = SecureRandom.getInstance(SHA1_PRNG);
 		} catch (NoSuchAlgorithmException e) {
-			LOG.error(e.getMessage(), e);
+			LOG.log(Level.SEVERE, e.getMessage(), e);
 		}
 		getNextSecureRandom(DEFAULT_RANDOM_SIZE);
 		return secureRandom;

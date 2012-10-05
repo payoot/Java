@@ -37,7 +37,7 @@ public class PasswordEncoderNGTest {
     }
 
     @Test
-    public void testEncodePerf() throws Exception {
+    public void testEncodePerformance() throws Exception {
         final String saltKey_1 = "1234567890";
         final String password_1 = "4124;kdfasjflkasf";
 
